@@ -17,7 +17,8 @@ import jakarta.inject.Named;
 public class AspiranteBean implements Serializable {
 
 	/**
-	 * 
+	 *  Se crean las listas y el obj nuevo aspirante para registarlo
+	 *  Están todos estos getters y setters para obtener los datos en el JSF
 	 */
 	private static final long serialVersionUID = 1L;
 	private Aspirante dto = new Aspirante();
@@ -52,6 +53,9 @@ public class AspiranteBean implements Serializable {
 		this.listaPa = listaPa;
 	}
 
+	
+	//Lo que hace esta función es rimero obtener la fecha, verificar que los datos seleccionados sean válidos
+	//Y luego llama a la ListaAs y agrega el objeto con los datos ingresados e imprime un mensaje diciendo que se registró
 	public void registrar() {
 		dto.setFecha_reg(LocalDate.now());
 		if (dto.getPro_acad().getCod() >= 0 && dto.getPro_acad().getCod() < listaPa.size()) {

@@ -72,6 +72,7 @@ public class Persona implements Serializable{
 		return Objects.hash(apellidos, correo, id_p, nombres, telefono);
 	}
 
+	//Se sobreescribe el equals pero con todas las variables del objeto persona
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

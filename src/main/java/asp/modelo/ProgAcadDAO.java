@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class ProgAcadDAO {
 
 	public static ArrayList<ProgAcad> lista_P = new ArrayList<ProgAcad>();
-
+	
+	//para simular una base de datos según entiendo, basado en la estructura de un arraylist, simplemente poner unos datos de ejemplo que se mostrarán
 	public static void cargaDatos() {
 		if(lista_P.isEmpty()) {
 			System.out.println("Lista vacia");

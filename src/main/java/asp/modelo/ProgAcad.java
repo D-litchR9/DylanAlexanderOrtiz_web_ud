@@ -6,7 +6,7 @@ import java.util.Objects;
 public class ProgAcad implements Serializable{
 	
 	/**
-	 * 
+	 * Clase para gestionar los programas académicos que hay y buscarlos en al ultima funcion
 	 */
 	private static final long serialVersionUID = 1L;
 	private int cod;
