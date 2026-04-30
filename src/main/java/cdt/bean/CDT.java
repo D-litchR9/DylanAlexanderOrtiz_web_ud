@@ -10,12 +10,18 @@ import jakarta.inject.Named;
 @ViewScoped
 public class CDT implements Serializable{
 
+	/**
+	 * Clase que muestra la inversión realizada, con el constructor lleno y la función calcular
+	 * para mostrar los ingresos generados a través de las variables obtenidas
+	 */
+	private static final long serialVersionUID = 1L;
 	private double inversion;
 	private double interes;
 	private double plazo;
 	private double ganancia;
 	private double valorFuturo;
 	private double impuesto;
+	
 	private static final double ANIO = 360;
 	
 	public CDT() {
@@ -70,13 +76,20 @@ public class CDT implements Serializable{
 		this.valorFuturo = valorFuturo;
 	}
 	
-	  public void calcular() {
-	        ganancia = inversion * (interes * (plazo / ANIO));
-	        System.out.println("ganancia: "+ganancia);
-	        valorFuturo = inversion + getGanancia();
-	        System.out.println("valorFuturo:" + valorFuturo);
-	        impuesto = ganancia * 0.04;
-	    }
+	public void calcular() {
+	   
+	    double interesDecimal = interes / 100.0; 
+	    
+	    
+	    ganancia = inversion * (interesDecimal * ((double) plazo / ANIO));
+	    
+	    System.out.println("ganancia: " + ganancia);
+	    valorFuturo = inversion + ganancia;
+	    System.out.println("valorFuturo: " + valorFuturo);
+	    
+	    impuesto = ganancia * 0.04;
+	}
+
 	
 	public double getImpuesto() {
 		return impuesto;
