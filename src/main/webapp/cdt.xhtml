@@ -6,8 +6,9 @@
 
 <h:head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Simulador CDT</title>
-</h:head>
+	<title>Simulador CDT</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	</h:head>
 <h:body>
 	<h:form>
 	<h2>Datos para el simulador</h2>
@@ -37,7 +38,7 @@
                 </h:outputText>
                 <br/>
                 <h:outputText value="Valor final al vencimiento: "></h:outputText>
-                <h:outputText value="#{cdt.valorFuturo - cdt.impuesto}">
+                <h:outputText value="#{cdt.valorFuturo}">
                     <f:convertNumber type="currency" currencySymbol="$" maxFractionDigits="2" groupingUsed="true" />
                 </h:outputText>
                 <br/>
@@ -57,7 +58,7 @@
 	<footer>
 		<a href="index.xhtml">Inicio</a>
 		<br/><br/><br/><br/>
-		<h4>Ing. Noé Arcos Muñoz  -  narcosm@udistrital.edu.co  -  2026  -  Programación</h4>
+		<h4>Ing. Dylan Alexander Ortiz  -  dacanaveralo@udistrital.edu.co -  2026  -  Programación Avanzada</h4>
 	</footer>
 </h:body>
 </html>
