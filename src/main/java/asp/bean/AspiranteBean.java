@@ -9,7 +9,7 @@ import asp.modelo.AspiranteDAO;
 import asp.modelo.ProgAcad;
 import asp.modelo.ProgAcadDAO;
 import jakarta.enterprise.context.RequestScoped;
-import jakarta.inject.Inject;
+//import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
 @Named("asp")

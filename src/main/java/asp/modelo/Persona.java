@@ -15,6 +15,15 @@ public class Persona implements Serializable{
 	private String telefono;
 	private String correo;
 	
+	private int diaNacimiento;
+	private int mesNacimiento;
+	private int anioNacimiento;
+	
+	
+	
+	
+	
+	
 	public Persona() {
 
 	}
@@ -27,45 +36,34 @@ public class Persona implements Serializable{
 		this.correo = correo;
 	}
 
-	public long getId_p() {
-		return id_p;
-	}
+	public long getId_p() {return id_p;}
+	public void setId_p(long id_p) {this.id_p = id_p;}
 
-	public void setId_p(long id_p) {
-		this.id_p = id_p;
-	}
+	public String getNombres() {return nombres;}
+	public void setNombres(String nombres) {this.nombres = nombres;}
 
-	public String getNombres() {
-		return nombres;
-	}
+	public String getApellidos() {return apellidos;}
+	public void setApellidos(String apellidos) {this.apellidos = apellidos;}
 
-	public void setNombres(String nombres) {
-		this.nombres = nombres;
-	}
+	public String getTelefono() {return telefono;}
+	public void setTelefono(String telefono) {this.telefono = telefono;}
 
-	public String getApellidos() {
-		return apellidos;
-	}
+	public String getCorreo() {return correo;}
+	public void setCorreo(String correo) {this.correo = correo;}
+	
+	public int getDiaNacimiento() { return diaNacimiento; }
+	public void setDiaNacimiento(int diaNacimiento) { this.diaNacimiento = diaNacimiento; }
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
+	public int getMesNacimiento() { return mesNacimiento; }
+	public void setMesNacimiento(int mesNacimiento) { this.mesNacimiento = mesNacimiento; }
 
-	public String getTelefono() {
-		return telefono;
-	}
+	public int getAnioNacimiento() { return anioNacimiento; }
+	public void setAnioNacimiento(int anioNacimiento) { this.anioNacimiento = anioNacimiento; }
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
+	public String getFecha() {
+		return String.format("%02d/%02d/%d", diaNacimiento,mesNacimiento,anioNacimiento );
 	}
-
-	public String getCorreo() {
-		return correo;
-	}
-
-	public void setCorreo(String correo) {
-		this.correo = correo;
-	}
+	
 
 	@Override
 	public int hashCode() {

@@ -36,9 +36,20 @@
 		<h:inputText id="correo" value="#{asp.dto.correo}" required="true" />
 		<br />
 		<br />
+		<h:outputLabel for="diaNacimiento" value="Día de Nacimiento:" />
+		<h:inputText id="diaNacimiento" value="#{asp.dto.diaNacimiento}" required="true" />
+		<br />
+		<br />
+		<h:outputLabel for="mesNacimiento" value="Mes de Nacimiento:" />
+		<h:inputText id="mesNacimiento" value="#{asp.dto.mesNacimiento}" required="true" />
+		<br />
+		<br />
+		<h:outputLabel for="anioNacimiento" value="Año de Nacimiento:" />
+		<h:inputText id="anioNacimiento" value="#{asp.dto.anioNacimiento}" required="true" />
+		<br />
+		<br />
 		<h:outputLabel for="pro_aca" value="Programa Academico: " />
-		<h:selectOneMenu id="pro_aca" value="#{asp.dto.pro_acad.cod}"
-			required="true">
+		<h:selectOneMenu id="pro_aca" value="#{asp.dto.pro_acad.cod}"  required="true">
 			<f:selectItem itemValue="-1" itemLabel="-- seleccione --"
 				noSelectionOption="true" />
 			<f:selectItems value="#{asp.listaPa}" var="p"
@@ -86,7 +97,10 @@
 					<f:facet name="header">Correo </f:facet>
 					<h:outputText value="#{aspirante.correo}" />
 				</h:column>
-
+				<h:column>
+					<f:facet name="header">Fecha Nacimiento </f:facet>
+					<h:outputText value="#{aspirante.fecha}" />
+				</h:column>
 			</h:dataTable>
 
 		</h:panelGroup>
