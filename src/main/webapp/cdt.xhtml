@@ -48,7 +48,7 @@
                 </h:outputText>
                    <br/>
                 <h:outputText value="Ganancia despues de impuestos: "></h:outputText>
-                <h:outputText value="#{cdt.ganancia - cdt.impuesto}">
+                <h:outputText value="#{cdt.gananciaNeta}">
                     <f:convertNumber type="currency" currencySymbol="$" maxFractionDigits="2" groupingUsed="true" />
                 </h:outputText>
 
